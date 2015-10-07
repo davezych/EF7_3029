@@ -23,7 +23,7 @@ namespace EF7_3029.Controllers
             {
                 f.Id,
                 Count = f.Topics.Count
-            });
+            }).ToList();
 
             return View();
         }
