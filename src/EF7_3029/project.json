@@ -9,7 +9,8 @@
     "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-15954",
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-15954",
     "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-15791",
-    "EntityFramework.Relational": "7.0.0-rc1-15886"
+    "EntityFramework.Relational": "7.0.0-rc1-15886",
+    "Microsoft.AspNet.Server.WebListener": "1.0.0-rc1-15692"
   },
 
   "commands": {
