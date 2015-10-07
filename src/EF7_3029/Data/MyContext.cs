@@ -37,6 +37,11 @@ namespace EF7_3029.Data
     
     public class Forum
     {
+        public Forum()
+        {
+            Topics = new HashSet<Topic>();
+        }
+
         public int Id { get; set; }
         public string Title { get; set; }
 
