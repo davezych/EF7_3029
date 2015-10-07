@@ -27,6 +27,8 @@ namespace EF7_3029.Data
 
                 forum.Topics.Add(topic2);
 
+                context.Forums.Add(forum);
+
                 context.SaveChanges();
             }
         }
