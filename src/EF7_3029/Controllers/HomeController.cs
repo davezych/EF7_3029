@@ -19,7 +19,7 @@ namespace EF7_3029.Controllers
 
         public IActionResult Index()
         {
-            var things = _context.Forums.Include(f => f.Topics).Select(f => new
+            var forums = _context.Forums.Include(f => f.Topics).Select(f => new
             {
                 f.Id,
                 Count = f.Topics.Count
