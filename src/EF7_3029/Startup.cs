@@ -30,6 +30,9 @@ namespace EF7_3029
             {
                 routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}");
             });
+
+            app.EnsureMigrationsApplied();
+            app.EnsureSampleData();
         }
     }
 }

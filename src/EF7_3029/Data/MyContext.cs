@@ -33,24 +33,24 @@ namespace EF7_3029.Data
                 entity.Property(e => e.Title).HasMaxLength(80);
             });
         }
+    }
+    
+    public class Forum
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
 
-        public class Forum
-        {
-            public int Id { get; set; }
-            public string Title { get; set; }
-            
-            public ICollection<Topic> Topics { get; set; }
-        }
+        public ICollection<Topic> Topics { get; set; }
+    }
 
-        public class Topic
-        {
-            public int Id { get; set; }
-            public string Title { get; set; }
-            public int ForumId { get; set; }
+    public class Topic
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public int ForumId { get; set; }
 
-            [ForeignKey(nameof(ForumId))]
-            [InverseProperty("Topics")]
-            public Forum Forum { get; set; }
-        }
+        [ForeignKey(nameof(ForumId))]
+        [InverseProperty("Topics")]
+        public Forum Forum { get; set; }
     }
 }
