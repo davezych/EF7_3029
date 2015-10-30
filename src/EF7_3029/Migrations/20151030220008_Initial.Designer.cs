@@ -8,14 +8,14 @@ using EF7_3029.Data;
 namespace EF7_3029.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20151007223046_Initial")]
+    [Migration("20151030220008_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .Annotation("ProductVersion", "7.0.0-rc1-15886")
-                .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "7.0.0-rc1-16147")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("EF7_3029.Data.Forum", b =>
                 {
@@ -23,7 +23,7 @@ namespace EF7_3029.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Title")
-                        .Annotation("MaxLength", 80);
+                        .HasAnnotation("MaxLength", 80);
 
                     b.HasKey("Id");
                 });
@@ -33,10 +33,12 @@ namespace EF7_3029.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("Counter");
+
                     b.Property<int>("ForumId");
 
                     b.Property<string>("Title")
-                        .Annotation("MaxLength", 80);
+                        .HasAnnotation("MaxLength", 80);
 
                     b.HasKey("Id");
                 });
@@ -45,7 +47,7 @@ namespace EF7_3029.Migrations
                 {
                     b.HasOne("EF7_3029.Data.Forum")
                         .WithMany()
-                        .ForeignKey("ForumId");
+                        .HasForeignKey("ForumId");
                 });
         }
     }

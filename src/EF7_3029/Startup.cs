@@ -1,7 +1,7 @@
 ﻿using EF7_3029.Data;
 using Microsoft.AspNet.Builder;
-using Microsoft.Framework.DependencyInjection;
 using Microsoft.Data.Entity;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace EF7_3029
 {

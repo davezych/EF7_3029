@@ -16,22 +16,14 @@ namespace EF7_3029.Data
         public DbSet<Forum> Forums { get; set; }
         public DbSet<Topic> Topics { get; set; }
 
-        public MyContext(DbContextOptions options) : base(options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            optionsBuilder.UseSqlServer(
+                @"Server=(localdb)\mssqllocaldb;Database=EF7_3029.AspNet5;Trusted_Connection=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Forum>(entity =>
-            {
-                entity.Property(e => e.Title).HasMaxLength(80);
-            });
-
-            modelBuilder.Entity<Topic>(entity =>
-            {
-                entity.Property(e => e.Title).HasMaxLength(80);
-            });
         }
     }
     
@@ -53,6 +45,7 @@ namespace EF7_3029.Data
         public int Id { get; set; }
         public string Title { get; set; }
         public int ForumId { get; set; }
+        public int Counter { get; set; }
 
         [ForeignKey(nameof(ForumId))]
         [InverseProperty("Topics")]

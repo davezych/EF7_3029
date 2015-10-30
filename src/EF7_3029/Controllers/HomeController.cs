@@ -22,7 +22,8 @@ namespace EF7_3029.Controllers
             var forums = _context.Forums.Include(f => f.Topics).Select(f => new
             {
                 f.Id,
-                Count = f.Topics.Count
+                Counter = f.Topics.Sum(t => t.Counter),
+                TopicCount = f.Topics.Count(),
             }).ToList();
 
             return View();

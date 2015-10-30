@@ -18,12 +18,14 @@ namespace EF7_3029.Data
                 var topic = new Topic();
                 topic.Title = "SAMPLE";
                 topic.Forum = forum;
+                topic.Counter = 10;
 
                 forum.Topics.Add(topic);
 
                 var topic2 = new Topic();
                 topic2.Title = "SAMPLE2";
                 topic2.Forum = forum;
+                topic2.Counter = 9;
 
                 forum.Topics.Add(topic2);
 

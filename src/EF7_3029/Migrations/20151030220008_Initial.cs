@@ -27,6 +27,7 @@ namespace EF7_3029.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Counter = table.Column<int>(nullable: false),
                     ForumId = table.Column<int>(nullable: false),
                     Title = table.Column<string>(nullable: true)
                 },
@@ -37,7 +38,8 @@ namespace EF7_3029.Migrations
                         name: "FK_Topic_Forum_ForumId",
                         column: x => x.ForumId,
                         principalTable: "Forum",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
         }
 

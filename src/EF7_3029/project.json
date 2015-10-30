@@ -3,18 +3,18 @@
   "version": "1.0.0-*",
 
   "dependencies": {
-    "EntityFramework.SqlServer": "7.0.0-rc1-15886",
-    "EntityFramework.Core": "7.0.0-rc1-15886",
-    "EntityFramework.Commands": "7.0.0-rc1-15886",
-    "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-15954",
-    "Microsoft.AspNet.Mvc": "6.0.0-rc1-15954",
-    "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-15791",
-    "EntityFramework.Relational": "7.0.0-rc1-15886",
-    "Microsoft.AspNet.Server.WebListener": "1.0.0-rc1-15692"
+    "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-16147",
+    "EntityFramework.Core": "7.0.0-rc1-16147",
+    "EntityFramework.Commands": "7.0.0-rc1-16147",
+    "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16213",
+    "Microsoft.AspNet.Mvc": "6.0.0-rc1-16213",
+    "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-15989",
+    "EntityFramework.Relational": "7.0.0-rc1-16147",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-15899"
   },
 
   "commands": {
-    "web": "Microsoft.AspNet.Hosting server=Microsoft.AspNet.Server.WebListener server.urls=http://localhost:5002",
+    "web": "Microsoft.AspNet.Server.Kestrel server.urls=http://localhost:5002",
     "ef": "EntityFramework.Commands"
   },
 
