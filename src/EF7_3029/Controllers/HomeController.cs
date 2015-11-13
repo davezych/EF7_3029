@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using EF7_3029.Data;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Data.Entity;
@@ -19,12 +16,9 @@ namespace EF7_3029.Controllers
 
         public IActionResult Index()
         {
-            var forums = _context.Forums.Include(f => f.Topics).Select(f => new
-            {
-                f.Id,
-                Counter = f.Topics.Sum(t => t.Counter),
-                TopicCount = f.Topics.Count(),
-            }).ToList();
+            var forums = _context.Forums.Include(f => f.Topics).FirstOrDefault();
+
+            var topics = _context.Topics.ToList();
 
             return View();
         }
