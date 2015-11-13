@@ -3,14 +3,14 @@
   "version": "1.0.0-*",
 
   "dependencies": {
-    "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-16147",
-    "EntityFramework.Core": "7.0.0-rc1-16147",
-    "EntityFramework.Commands": "7.0.0-rc1-16147",
-    "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-16213",
-    "Microsoft.AspNet.Mvc": "6.0.0-rc1-16213",
-    "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-15989",
-    "EntityFramework.Relational": "7.0.0-rc1-16147",
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-15899"
+    "EntityFramework.MicrosoftSqlServer": "7.0.0-rc2-16332",
+    "EntityFramework.Core": "7.0.0-rc2-16332",
+    "EntityFramework.Commands": "7.0.0-rc2-16332",
+    "Microsoft.AspNet.Mvc.Core": "6.0.0-rc2-16377",
+    "Microsoft.AspNet.Mvc": "6.0.0-rc2-16377",
+    "Microsoft.AspNet.Diagnostics": "1.0.0-rc2-16136",
+    "EntityFramework.Relational": "7.0.0-rc2-16332",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc2-16017"
   },
 
   "commands": {
@@ -19,8 +19,7 @@
   },
 
   "frameworks": {
-    "dnx451": { },
-    "dnxcore50": { }
+    "dnx451": { }
   },
 
   "publishExclude": [
